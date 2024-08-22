@@ -1,0 +1,158 @@
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #363636;
+    color: #ffffff;
+    line-height: 1.6;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+    background-color: #ff0000;
+    color: #000000;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: #000000;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    border-bottom: 3px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+   
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+/* Социальные сети */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: auto;
+}
+
+/* Футер */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .close-button {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .social-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-icons a img {
+        width: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .close-button {
+        font-size: 18px;
+        top: 5px;
+        right: 5px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    .social-icons a img {
+        width: 30px;
+    }
+}
